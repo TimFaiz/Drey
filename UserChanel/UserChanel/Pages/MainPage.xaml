@@ -1,0 +1,53 @@
+﻿<Page x:Class="UserChanel.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UserChanel.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="Yellow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--<TextBlock Text="Вход в систему " Foreground="Black" FontSize="25" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,65,144,202" Width="646" Height="183">
+            <TextBlock Text="Награды за участвие в жизненнных событиях колледжа" Foreground="Black" FontSize="20"></TextBlock>
+            <TextBox x:Name="TBLogin" Width="350" Height="20" TextAlignment="Left"></TextBox>
+        </StackPanel>-->
+        <DataGrid x:Name="DGUser"
+                  Grid.Column="1"
+                  AutoGenerateColumns="False" SelectionChanged="DGUser_SelectionChanged">
+            <DataGrid.Columns >
+                <DataGridTextColumn     Header="Январь" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Февраль" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Март" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Апрель" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Май" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Июнь" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Июль" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Август" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Сентябрь" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Октябрь" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Ноябрь" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="Декабрь" Binding="{Binding FIO}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <ListView x:Name="faroo">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding FIO}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
+                  
+                  
+    </Grid>
+</Page>
